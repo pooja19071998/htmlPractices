@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       x a:link{
+            color:rgb(200, 33, 55);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:visited{
+            color:rgb(211, 33, 214);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover{
+            color:rgb(66, 56, 4);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active{
+            color:rgb(27, 18, 214);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        img{
+            width:100px;
+            height:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://www.w3schools.com/html/html_links.asp">click me to go w3school</a>
+    <h1>HTML link - the target attribute </h1>
+    <a href="https://www.w3schools.com/html" target ="_self">(self)click here to Open the link in the same tab</a><br>
+    <a href="https://www.w3schools.com/html" target ="_blank">(blank)click here to open the link in the new tab</a><br>
+    <a href="https://www.w3schools.com/html" target ="_parent">(parent)click here to open the link in parent frame</a><br>
+    <a href="https://www.w3schools.com/html" target ="_top">(top)click here to open the link in full body of window</a>
+    <h2>image as a link</h2>
+    <a href="https://www.w3schools.com/html"><img src="C:\Users\Pooja\Desktop\practice\html\w3.png" title="w3School web page link"alt="HTML tutorial" style="width:70px;height:80px;"></a> <br><br>
+    <a href="csslink.html">click me to another page</a><br>
+    <a href="mailto:poojasgsrg@gmail.com">send mail</a><br>
+
+    <a href="linkbutton.html">This is the link</a>
+
+    <p><a href="#c4">jump to chapter 4</a><br></p>
+    <p><a href="#c6">jump to chapter 6</a></p>
+    <h2>chapter 1</h2>
+    <h2>chapter 2</h2>
+    <h2>chapter 3</h2>
+    <h2 id="c4">chapter 4</h2>
+    <h2>chapter 5</h2>
+    <h2 id="c6">chapter 6</h2>
+    <h2>chapter 7</h2>
+    <h2>chapter 8</h2>
+    <h2>chapter 9</h2>
+    <h2 id="c10">chapter 10</h2><br>
+
+    <img src="html.png" alt="logo of HTML" width="70px" height="70px"><!--here width is Override by style-->
+    <div>
+    <br><img src="html.png"  style="position:relative; top:15spx; left: 210px; width:30px; height:30px;">image is on right of this text
+    <br><img src="html.png"  style="float:left; width:20px; height:20px;">image is on left of this text
+    </div>
+    <p><img src="elephant.gif" style="width:150px; height:150px;" ><br>Animated image</p>
+
+
+    <img src="1.gif" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="10,70,130,200" alt="cacke" href="cacke.jpg">
+        <area shape="rect" coords="15,50,50,100" alt="cacke" href="candle.jpg">
+        <area shape="rect" coords="0,0,150,10" alt="cacke" href="candlefume.jpg">
+    </map>
+        
+    
+    
+</body>
+</html>
