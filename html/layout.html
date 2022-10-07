@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    header{
+        background-color:rgb(4, 97, 96);
+        width: 100%;
+        height:90px;
+        color:white;
+        text-align:center;
+        padding: 5px;
+        font-size: 25px;
+    }
+    nav{
+        background-color:#ccc;
+        float:left;
+        height:400px;
+        width: 20%;
+    }
+    article{
+        float: left;
+        width: 80%;
+        background-color: #f1f1f1;
+        height: 400px;
+    }
+    footer{
+        background-color: rgb(4, 97, 96);
+        padding: 20px;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        
+    }
+    aside{
+        float: right;
+    }
+    #style{
+        text-align:center; 
+        border:2px solid brown;
+        width: 800px;
+        background-color:aliceblue;
+        padding:50px;
+        margin: 50px;
+       
+    }
+    #name1{
+        border: 2px solid blue;
+        background-color: antiquewhite;
+        font-size: 30%;
+        color: black;
+        width:300px;
+        margin:10px;
+       
+    }
+    
+    
+ </style>
+ <script>
+    var name;
+    var pass;
+    function myfunction(){
+        name=String(document.getElementById('name').value);
+        pass=String(document.getElementById('pass').value);
+        if(name=="pooja" && pass=="xyz")
+        {
+            window.location.href="form.html";
+        }
+        else{
+            alert("enter correct name and password");
+        }
+    }
+ </script>
+</head>
+<body>
+    <header><h1>Heading</h1></header>
+    <section>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>about</li>
+                <li>contact us</li>
+            </ul>
+        </nav>
+        <article>
+            <br>
+            <div id="style">
+                <br>
+                <label>Enter your name:<input type="text" id="name"></label><br><br>
+                <label>Enter Password:<input type="password" id="pass"></label><br><br>
+                <button  onclick="myfunction()">submit</button><br><br></div>
+               
+        </article>
+    </section><br>
+    <aside>paragraph</aside>
+    <footer >
+        <p>footer of the page</p>
+     
+       <div style="width:200px;">
+         <form action="demo-on-JS.html" id="name1"><br>
+            
+            <fieldset>
+                <legend>Login Form:</legend>
+                <label>Enter your name:<input type="text" id="name"></label><br><br>
+            <label>Enter Password:<input type="password" id="pass"></label><br><br>
+            <input type="submit" value="submit"><br><br></fieldset><br>
+        </form>
+     
+       </div>
+    </footer>
+
+    
+</body>
+</html>

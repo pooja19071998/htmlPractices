@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            document.getElementById("demo1").innerHTML="javascript can change the style of and HTML element "
+            document.getElementById("demo1").style.fontSize = "25px";
+            document.getElementById("demo1").style.color="blue";
+            document.getElementById("demo1").style.backgroundColor="yellow";
+            document.getElementById("demo").style.width="100%";
+        }
+        function light(sw){
+            var pic;
+            if(sw==0){
+                pic = "bulboff.jpg";
+            }
+            else{
+                pic="bulbon.jpg";
+            }
+            document.getElementById('demo2').src=pic;
+        }
+    </script>
+    <meta http-equiv="refresh" content="20">
+    <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <marquee> <h1 style="text-align:center;">My frist JS program</h1></marquee>
+   
+    <p>javScript can </p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='Hello JavaScript'";>click me</button>
+    <p id="demo">This is demonstration</p>
+
+    <button type="button" onclick="myfunction()">Click Me!</button><br><br>
+    
+    <span id="demo1">This is demonstration</span><br><br><br><br>
+   
+    
+    <div style="border:3px solid pink; height:150px;width:500px;">
+        <div style="float:left; width:50%">
+            <img id="demo2" src="bulboff.jpg" style="float:left; height:80px; width:80px;"><br><br><br><br><br><br>
+    <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light off</button>
+    </p>
+        </div>
+        <div style="float:right; width:40%">
+            <img src="https://www.w3schools.com/images/picture.jpg" alt="image of mountain" style="height:150px;">
+        </div>
+    </div>
+    
+</body>
+</html>
