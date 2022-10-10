@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            document.getElementById('demo2').innerHTML="Paragraph changed";
+        }
+        
+    </script>
+  
+</head>
+<body>
+    <img src="bulboff.jpg" id="img" style="width:100px; height:100px;" ><br><br>
+    <button onclick="document.getElementById('img').src='bulboff.jpg'">turn off the bulb</button>
+    <button onclick="document.getElementById('img').src='bulbon.jpg'">turn on the bulb</button>
+    <hr>
+    <br><br><p id="demo" style="display:none;">Hellow World!</p><br>
+    <button onclick="document.getElementById('demo').style.display='block'">click me</button>
+
+    <p id="demo1"></p>
+    <script>
+        document.getElementById('demo1').innerHTML="Hellow World!";
+    </script><hr>
+    <p id="demo2">A paragraph</p>
+    <button onclick="myfunction()">try it</button><hr>
+    <h2>Javascript display possibilities </h2>
+    <p id="demo3"></p>
+    <button onclick="document.getElementById('demo3').innerHTML=3+2">click me</button>
+     <hr>
+     <script>document.write(5+6 + "<br>");
+    document.write("hellow  World");
+    window.alert("hello world! <br>")
+    </script>
+    <button onclick="window.alert('Hellow World + 3+2')">click me</button>
+    <hr>
+
+
+
+    
+</body>
+</html>
