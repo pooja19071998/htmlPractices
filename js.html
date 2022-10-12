@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        alert("Hello World!")
+        console.log(2+4+5+4)
+        console.log(23)
+        console.log("jonas")
+        
+       
+    </script>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p>Var can use before declaring</p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+   
+    <script>
+        let name="john", price=200,x;
+        var carname="volva";
+        var carname
+        let $=2;
+        let $$=5;
+        document.getElementById("demo").innerHTML=carname;
+        document.getElementById("demo1").innerHTML=$+$$+" "+name;
+        try{
+            const pi=3.124;
+            pi=3.14;
+        }
+        catch(err){
+            document.getElementById("demo2").innerHTML="error";
+        }
+        var a=3;
+        {
+            var a=10;
+        }
+        document.getElementById("demo3").innerHTML=a;
+        b=90;
+        document.getElementById("demo4").innerHTML=b;
+        var b;
+        
+        try {
+        
+         const carName = "Volvo";
+         alert(carName);
+        }
+        catch (err) {
+         document.getElementById("demo5").innerHTML = "error";
+        }
+        var x1=10,y=5;
+        z=x1+y;
+        x1*=y
+        document.getElementById("demo6").innerHTML=x1;
+        document.write(x1**=y)
+        document.write(x1/=y)
+        document.write(x1%=y)
+        x1=y
+        document.write(" ")
+        document.write(x)
+        document.write(" ")
+        document.write(x1)
+
+
+
+
+
+
+    </script>
+     
+    
+
+    <h1>
+        <center>Well Come.</center>
+    </h1>
+</body>
+</html>

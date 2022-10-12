@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        div{
+            color:blue;
+        }
+        h1{
+            border:8px inset blue;
+            margin:0 0 50px 0;
+            width:300px;
+            color:initial;
+        }
+        h2{
+           border:3px outset blue;
+           margin:20px 0 0 0;
+           padding:20px 40px 80px 10px;
+        }
+        p{
+            max-width:500px;
+            max-height:150px;
+            overflow:auto;
+            border:2px dotted violet;
+            padding:20px
+        }
+        span{
+            color:green;
+            border:2px solid red;
+        }
+        .extra span{
+            color:inherit;
+        }
+        img{
+            margin-top:20px;
+        }
+        .demo{
+            margin-top:90px;
+            border:2px solid green;
+        }
+        
+        .demo1{
+            border:2px solid black;
+            outline: 10px solid black;
+            outline-offset: 10px;
+            margin-top:40px;
+            text-transform: capitalize;
+            
+        }
+        #name{
+            text-decoration-line: underline;
+            border: inherit; 
+            text-transform: lowercase;
+        }
+        
+        #name1{
+            text-decoration-line: overline;
+            border: inherit; 
+            text-decoration-color: rgb(67, 57, 43);
+            text-decoration-style: dotted;
+            text-decoration-thickness: 4px;
+            outline: 2px solid blue;
+            text-transform: uppercase;
+            
+        }
+        #name2 th,td{
+            text-align:left;
+            padding: 5px;
+            width:100px;
+            border-collapse: collapse;
+        }
+        tr:nth-child(even){background-color: antiquewhite;}
+        
+    </style>
+</head>
+<body>
+    <i class="fa fa-cloud green-color"></i>
+    <p style=" border:inherit;"><i class="fas fa-cloud fa-spin" style="font-size:30px;"></i></p>
+    <i class="glyphicon glyphicon-thumbs-up" style="font-size:60px;"></i>
+   
+    <div>
+        <h1>This div will be horizontally centered because it has margin: auto;</h1>
+        <h2>This div will be horizontally centered because it has margin: auto;</h2>
+        <h2>This div will be horizontally centered because it has margin: auto;</h2>
+        <h2 class="extra">This div will be horizontally<span>span element</span> centered because it has margin: auto;</h2>
+        <h2>This div will be horizontally<span>span element</span> centered because it has margin: auto;</h2>
+        <h2>This div will be horizontally<span>span element</span> centered because it has margin: auto;</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.
+        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.
+        <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.
+    </p>
+    <img src="candle.jpg" width="320px" height="320px">
+    <p class="demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</p>
+    <p class="demo1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</p>
+    <p class="demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</p>
+
+    <p style="text-align-last:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut
+    </p>
+    <p style="direction:rtl;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">This is the default text direction.</p>
+    <p style="direction:rtl; unicode-bidi: bidi-override;">This is the default text direction.</p>
+    <p >This is the default text direction.<span style="vertical-align:sub; border:none;">This is the default text direction.</span></p>
+    <p>This is the default text direction.<span style="vertical-align:sup; border:none;">This is the default text direction.</span></p>
+    <p style=" font-variant: small-caps;">This is the default text direction.<span style="vertical-align:bottom; border:none;">This is the default text direction.</span></p>
+    <p id="name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut</p>
+    <p id="name1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut</p>
+    <p style="letter-spacing:5px;text-shadow: 2px 2px 5px red;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p style="line-height:30px;">Etiam semper diam at erat pulvinar, at pulvinar felis blandit.Etiam semper diam at erat pulvinar, at pulvinar felis blandit.Etiam semper diam at erat pulvinar, at pulvinar felis blandit.Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut</p>
+    <h1 style="color: white;
+    text-shadow: 2px 2px 4px #000000; ">Text-shadow effect!</h1>
+    <h2 style="font: italic bold 12px/30px Georgia, serif; border:inherit;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+
+
+    
+        <div style="overflow: auto; max-width:400px;">
+            <table id="name2">
+                <tr>
+                  <th>frist name</th>
+                  <th>midle name</th>
+                  <th>last name</th>
+                  <th>frist name</th>
+                  <th>midle name</th>
+                  <th>last name</th>
+                  <th>frist name</th>
+                  <th>midle name</th>
+                  <th>last name</th>
+                  
+                </tr>
+                <tr>
+                  <td>pooja</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pooja</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pooja</td>
+                  <td>s</td>
+                  <td>g</td>
+                </tr>
+                <tr>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                </tr>
+                <tr>
+                  <td>pooja</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                </tr>
+                <tr>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                  <td>pallavi</td>
+                  <td>s</td>
+                  <td>g</td>
+                </tr>
+                <tr>
+                    <td>pallavi</td>
+                    <td>s</td>
+                    <td>g</td>
+                    <td>pallavi</td>
+                    <td>s</td>
+                    <td>g</td>
+                    <td>pallavi</td>
+                    <td>s</td>
+                    <td>g</td>
+                  </tr>
+              </table>
+        </div>
+    
+
+
+</body>
+</html>
