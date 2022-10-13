@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+  
+</head>
+<body>
+
+    <button Onclick="displayDate()">click me</button>
+    <p id="demo13"></p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo14" style="color:red;"></p>
+    <p id="demo15" style="color:green"></p>
+    
+    <script>
+        let a=12 + "volva";
+        document.getElementById('demo').innerHTML=a;
+        let x=10;
+        let y=10;
+        let z=20;
+        let name="xyz";
+        document.getElementById('demo1').innerHTML=(x==y) + "<br>" + (y==z);
+        const cars=["saab" ,"bmw", "volvo"];
+        document.getElementById('demo2').innerHTML=cars[0];
+        const person={fristname:"john",lastname:"doe",age:30,eyecolor:"blue"};
+        document.getElementById('demo2').innerHTML=person.fristname + " is " +person.age+" years old "
+        document.getElementById('demo3').innerHTML=typeof(x)
+        document.getElementById('demo4').innerHTML=typeof(name)
+        document.getElementById('demo5').innerHTML=demo(10,20);
+
+        function demo(p1,p2){
+            return p1*p2;
+        }
+        document.getElementById('demo6').innerHTML="the tempretue is " +toCelsius(77)+"celsius";
+        function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+    const name1={
+        fristname:"john",
+        lastname:"doe",
+        fullname:function(){
+            return this.fristname+ " " +this.lastname;
+        }
+    };
+    document.getElementById('demo7').innerHTML="fullname is"+name1.fullname();
+    function displayDate(){
+        document.getElementById('demo13').innerHTML=Date();
+    }
+        let ans1="it's alright";
+        let ans2="he is called 'johny'";
+        let ans3='he is called "johny"';
+        document.getElementById('demo14').innerHTML=ans1+"<br>"+ans2+"<br>"+ans3;
+        document.getElementById('demo15').innerHTML=ans1.length;
+    </script>
+    <p id="demo12"></p>
+   
+    <button Onclick="document.getElementById('demo12').innerHTML=Date()">click me</button><br><br>
+    <button Onclick="this.innerHTML=Date()">click me see date and time</button>
+
+</body>
+</html>
