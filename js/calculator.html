@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <p>
+            <span class="seconds">00</span>:
+            <span class="tens">00</span>
+        </p><br>
+        <button class="btn-start">Start</button>
+        <button class="btn-stop">Stop</button>
+        <button class="btn-reset">Reset</button>
+    </div>
+</div>
+<script>let seconds=00;
+    let tens=00;
+    let getSeconds=document.querySelector('.seconds');
+    let getTens=document.querySelector('.tens');
+    let btnStart = document.querySelector('.btn-start');
+    let btnStop = document.querySelector('.btn-stop');
+    let btnReset = document.querySelector('.btn-reset');
+    
+    btnStart.addEventListener('click',()=>{
+      setInterval(startTimer,10)
+    })
+    
+    function startTimer(){
+        tens++;
+        if(tens<=9){
+            getTens.innerHTML = '0' + tens;
+        }
+        if(tens>9){
+            getTens.innerHTML = tens;
+        }
+        if(seconds>99){
+            seconds++;
+            getSeconds.innerHTML = '0' + seconds;
+            tens = 0;
+            getTens.innerHTML= '0' + 0;
+        }
+        if(seconds>9){
+            getSeconds.innerHTML = seconds;
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>

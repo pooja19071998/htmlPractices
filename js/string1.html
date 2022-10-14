@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    
+</head>
+<body>
+    <span id="demo24" style="background-color:antiquewhite; "></span><br>
+    <span id="demo23" style="background-color:antiquewhite; "></span><br>
+    <span id="demo22" style="background-color:antiquewhite; "></span><br>
+
+    <span id="demo21" style="background-color:antiquewhite; "></span><br>
+    String is:-<p id="demo4"></p>
+   
+    <span id="demo" style="background-color:antiquewhite; "></span><br>
+    <span id="demo5" style="background-color:rgb(35, 6, 116);color:white; "></span><br>
+    <span id="demo7" style="background-color:rgb(116, 6, 78);color:white; "></span><br>
+    <span id="demo8" style="background-color:rgb(116, 6, 78);color:white; "></span><br>
+
+    <span id="demo1" style="background-color:rgb(183, 114, 24); "></span><br>
+    starting from the end of the string:-<span id="demo2" style="background-color:antiquewhite; "> </span><br>
+    count started from the started of the string:-<span id="demo6" style="background-color:rgb(183, 114, 24);"></span><br>
+    <span id="demo9" style="background-color:rgb(116, 6, 78);color:white; "></span><br>
+    <span id="demo10">Please visit the microsoft</span><br>
+    <span id="demo11">Please visit the microsoft</span>
+    <script>
+        let str="Apple, banana, kiwi";
+        document.getElementById('demo4').innerHTML=str;
+        document.getElementById('demo').innerHTML=str.slice(7,13);
+        document.getElementById('demo1').innerHTML=str.slice(-13,-6);
+        document.getElementById('demo2').innerHTML=str.slice(7);
+        document.getElementById('demo6').innerHTML=str.slice(-12); 
+        document.getElementById('demo5').innerHTML=str.substring(7,13); 
+        document.getElementById('demo5').innerHTML=str.substring(3); 
+        document.getElementById('demo7').innerHTML=str.substr(7,6);    
+        document.getElementById('demo8').innerHTML=str.substr(-4);  
+        let str1="Please visit microsoft";
+      
+        document.getElementById('demo9').innerHTML=str1.replace("microsoft","w3school");
+        
+        let str2= document.getElementById('demo10').innerHTML;
+        document.getElementById('demo11').innerHTML=str2.replace(/MICROSOFT/i,"w3school")+"<br>";
+
+        let str11="pooja";
+        let str12="s g";
+        str13=str11.concat(" "+str12);
+        document.write(str13);
+        str14="<br>"+ str11.toUpperCase();
+        document.write(str14);
+       str15="<br>"+ str14.toLowerCase();
+       document.write(str15);
+
+       let text="<br>"+"              Hellow World!          ";
+       document.write("<br>"+"length of the text before trim is: "+text.length);
+      let  text1 = text.trim();
+       document.write(text1);
+       document.write("<br>"+"length of the text after trim is: "+text1.length+"<br>");
+       document.write("charCode of text1 in 0th place is "+text1.charCodeAt(0));
+       document.write(text1.charAt(1));
+      let x="10";
+      let y=x.padStart(4,"x");
+      let z=x.padEnd(4,"x")
+      document.getElementById('demo21').innerHTML=y;
+      document.getElementById('demo22').innerHTML=z;
+      text3 = "Hellow,World";
+      text4 = text3.split(",");
+      document.getElementById('demo23').innerHTML=text4[0];
+      document.getElementById('demo24').innerHTML=text3[0]
+
+    </script>
+</body>
+</html>
