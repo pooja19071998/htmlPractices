@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <input id="age">
+    <button onclick="myfunction()">try it</button>
+    <p id="demo"></p> -->
+
+
+
+    <input type="text" id="age2">
+    <button onclick="myfunction1()">try it</button>
+    <p id="demo1"></p>
+
+    <script>
+        // function  myfunction(){
+        //     let age1=document.getElementById('age').value;
+        //     let votable = (age1<18)?"too young":"Old enough";
+        //     document.getElementById("demo").innerHTML=votable+" to vote.";
+        // }
+        function myfunction1(){
+            var voteable;
+            var old=parseInt(document.getElementById("age2").value);
+            if(isNaN(old)){
+                voteable="Input is not a number";
+                document.getElementById('demo1').innerHTML=voteable;
+            }else{
+                voteable = (old<18)? "too young":"Old enough";
+                document.getElementById('demo1').innerHTML=voteable;
+            }
+        }
+    </script>
+</body>
+</html>

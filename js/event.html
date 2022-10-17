@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            border:2px double black;
+            float: left;
+            margin: 20px;
+            text-align:center;
+            background-color: lightgray;
+            padding:20px
+        }
+        #IndexOf div{
+             margin-bottom: px;
+             
+        }
+    </style>
+</head>
+<body>
+    <center><img src="tree.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)" width="50px" height="50px"></center>
+    
+    <script>
+        function bigImg(x){
+            x.style.width="90px";
+            x.style.height="90px";
+        }
+        function normalImg(x){
+            x.style.width="50px";
+            x.style.height="50px";
+        }
+        function mouseOver(){
+            document.getElementById('demo').style.color="red";
+        }
+        function mouseOut(){
+            document.getElementById('demo').style.color="blue";
+        }
+        let x=0;
+        let y=0;
+        let z=0;
+        function onMouseMove(){
+            document.getElementById('demo1').innerHTML= x+=1;
+        }
+        function onMouseEnter(){
+            document.getElementById('demo2').innerHTML= y+=1;
+        }
+        function onMouseOver(){
+            document.getElementById('demo3').innerHTML= z+=1;
+        }
+        function OnChange(){
+            document.getElementById('OnChange').innerHTML="Hello World"
+        }
+        
+    </script>
+
+    <center> <h2 onmouseover="mouseOver()" onmouseOut="mouseOut()" id="demo">When mouse over on this text color change</h2></center>
+    
+    <div onmousemove="onMouseMove()"><p>mousemove: <span id="demo1"> Mouse over me! </span></p></div>
+    <div onmouseenter="onMouseEnter()"><p>mouseenter: <span id="demo2">Mouse over me!</span></p></div>
+    <div onmouseover="onMouseOver()"><p>mouseover: <span id="demo3">Mouse over me!</span></p></div>
+
+   
+   <div id="IndexOf"> </div>
+   <div id="match"></div>
+   <p id="startWith"></p>
+   <p id="demo11"></p>
+   <p id="demo12"></p>
+    <script>let str = "Please locate where 'locate' occurs!";
+        document.getElementById('IndexOf').innerHTML="search the last index of locate:-"+str.indexOf("locate");
+        let text = "The rain in SPAIN stays mainly in the plain";
+        document.getElementById('match').innerHTML="matching the word 'ain':-"+text.match(/ain/g);
+        document.getElementById('startWith').innerHTML="text start with Please:-"+text.startsWith("Please");
+        let fristName="pooja";
+        let lastName="sg";
+        let text1=`full name is:- ${fristName} , ${lastName}`;
+        document.getElementById('demo11').innerHTML=text1;
+
+        </script>
+        
+   
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4" style="color:green"></p>
+    <p id="demo5" style="color:blue"></p>
+    <script>
+        const car=["volva","BMW","benz"];
+        document.getElementById('demo').innerHTML=car;
+        const car1 = new Array("volva","BMW","benz");
+        document.getElementById('demo1').innerHTML=car1;
+        document.getElementById('demo2').innerHTML=car1[2];
+        car.push("ferrari");
+        document.getElementById('demo3').innerHTML="After pushing an element array becomes: "+car;
+        car.pop();
+        document.getElementById('demo4').innerHTML="After pop an element array become: "+car;
+        car.shift();
+        document.getElementById('demo5').innerHTML="shift method remove the frist element: "+car;
+        
+    </script>
+</body>
+</html>

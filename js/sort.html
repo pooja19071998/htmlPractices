@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myfunction()">click me</button>
+    <p id="demo2"></p>
+    <script>
+        const points = [10,20,30,4,1,100];
+       points.sort(function(a,b){return a-b});
+        document.getElementById("demo1").innerHTML=points;
+
+
+        points.sort();
+        document.getElementById("demo").innerHTML=points;
+
+        function myfunction(){
+            points.sort(function(){return 0.5 - Math.random()});
+            document.getElementById("demo2").innerHTML=points;
+        }
+
+        document.getElementById('demo3').innerHTML=minFunction(points);
+        function minFunction(arr){
+            return Math.min.apply(null,arr);
+        }
+
+        document.getElementById('demo4').innerHTML=minFunction1(points);
+        function minFunction1(arr){
+            return Math.max.apply(null,arr);
+        }
+        
+        var d = new Date();
+        document.getElementById('demo5').innerHTML="Date:  "+d;
+    </script>
+</body>
+</html>
