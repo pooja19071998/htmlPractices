@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="BookManagement.css">
+</head>
+<body onload="Myfunction()">
+    <h2>Book Management</h2>
+    <div style="float:right; padding:6px">
+        <button onclick="addBook()" id="button">Add Book</button>
+        <button>Search Book</button>
+    </div><br><br><br>
+    <script>
+        var totalData="";
+        var tab;
+        function addTable(bid,bname,aut,cat,chk,st)
+        {
+            var tr=document.createElement("tr");
+
+            var td=document.createElement("td");
+            td.innerHTML=bid;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=bname;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=aut;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=cat;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=chk;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=st;
+            tr.appendChild(td);
+
+            tab.appendChild(tr);
+        }
+
+        function Myfunction()
+        {
+            totalData=String(localStorage.getItem("data")).split("`");
+            
+            tab=document.getElementById("table");
+            var count=0;
+            for(var i=0;i<parseInt(totalData.length/6);i++)
+            {
+                addTable(totalData[count],totalData[count+1],totalData[count+2],totalData[count+3],totalData[count+4],totalData[count+5]);
+                count+=6;
+            }
+            var entry = document.getElementById('entry');
+        }
+        function displayDetails(){
+            var BookId = document.getElementById('BookId').value;
+            var BookName = document.getElementById('BookName').value;
+            var Author = document.getElementById('Author').value;
+            var cat = document.forms["alldetails"]["selection"].value;
+            var checkboxes = document.getElementsByName('Catagory');
+          var chk = "";
+
+         for (var checkbox of checkboxes)
+         {
+         if (checkbox.checked) {
+            chk=chk+" "+checkbox.value;
+        }
+        }
+
+       
+
+       var Status = document.forms["alldetails"]["status"].value;
+
+       if(BookId.length==0 || BookName.length==0 || Author.length==0 || cat.length==0 || chk.length==0|| Status.length==0){
+                alert("Please fill all the boxes");
+                return false;
+            }
+           else{
+            var count=0;
+            var isfound=false;
+            for(var i=0;i<parseInt(totalData.length/6);i++)
+            {
+                if(totalData[count]==BookId)
+                {
+                    isfound=true;
+                    break;
+                }
+                count+=6;
+            }
+            if(!isfound)
+            {
+                var d = String(localStorage.getItem("data"));
+            if(d!="null")
+            {
+                d=d+BookId+"`"+BookName+"`"+Author+"`"+cat+"`"+chk+"`"+Status+"`";
+                localStorage.setItem("data",d);
+            }
+            else{
+                
+                d=BookId+"`"+BookName+"`"+Author+"`"+cat+"`"+chk+"`"+Status+"`";
+                localStorage.setItem("data",d);
+            }
+            return true;
+            }
+            else{
+                alert("already exit");
+                return false;
+            }
+           }
+        }
+        function addBook(){
+        document.querySelector(".popup").style.display = "flex";
+        }
+    </script>
+<!--   table-->
+<div class="popup">
+    <div class="popup-content">
+        <form action="./addBook.html" name="alldetails" onsubmit="return displayDetails()" id="alldetails">
+            <table border="5">
+                <tr>
+                    <td style="text-align:right">Book Id:</td>
+                    <td><input type="text" placeholder="Book Id" name="BookId" id="BookId" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Book Name:</td>
+                    <td>
+                        <input type="text" placeholder="Book Name" name="BookName" id="BookName" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Author:</td>
+                    <td>
+                        <input type="text" placeholder="Author" name="Author" id="Author" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Catagory:</td>
+                    <td>
+                        <select  id="catagory">
+                            <option value="">-select-</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Mecanical">Mecanical</option>
+                            <option value="Cumputer">Cumputer</option>
+                            <option value="Civil">Civil</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">SubCatagory:</td>
+                    <td >
+                        <input type="checkbox" id="catagary1" value="Catagory1" name="Catagory"><span >Catagory1</span>
+                        <input type="checkbox" id="catagory2" value="Catagory2" name="Catagory">Catagory2
+                        <input type="checkbox" id="catagory3" value="Catagory3" name="Catagory">Catagory3
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Status:</td>
+                    <td>
+                        <input type="radio" id="Barrow" id="r1" name="rate" value="Barrow"><span>Barrow</span><br><br>
+                        <input type="radio" id="Return"><span id="r2" name="rate" value="Return">Return</span><br>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input id="entry" type="submit" style="padding-left:29px;padding-right:29px;" value="save">
+                <button id="cancel">Cancel</button>
+               
+            </div>
+        </form>   
+    </div>
+</div>
+<!--   table End-->
+
+<!---display table-->
+    <table style=" width:90%; margin:auto;" border="2">
+        <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>SubCatagory</th>
+                <th>Status</th>
+        </tr>
+    </table>
+    <!---display-->
+    
+</body>
+</html>

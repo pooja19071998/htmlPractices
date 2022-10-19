@@ -1,0 +1,15 @@
+.popup{
+    position:absolute;
+    left:30%;
+    bottom:100px;
+    z-index: 1;
+    display: none;
+    background: wheat;
+    width:300px;
+
+}
+.popup-content{
+    width: 380px;
+    border-radius: 5px;
+    position:relative;
+}

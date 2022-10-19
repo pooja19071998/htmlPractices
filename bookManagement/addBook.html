@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addBookCss.css">
+</head>
+<body onload="Myfunction()">
+    <h2>Book Management</h2>
+    <div style="float:right; padding:6px">
+        <input id="searchEle" style="width:200px;" type="text">
+        
+        <button class="button" id="button" style="padding-left:30px;padding-right:30px">Add Book</button>
+        <button class="button" onclick="searchData()" id="button">Search Book</button>
+        <button class="button" onclick="ReSet()" id="button">ReSet</button>
+    </div>
+ 
+    
+     
+    <div>
+        <table id="table" border="2" class="table">
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        //display table
+        var totalData="";
+        var tab;
+        //BookId+"`"+BookName+"`"+Author+"`"+cat+"`"+chk+"`"+Status+"`"
+        function addTable(bid,bname,aut,cat,chk,st)
+        {
+            var tr=document.createElement("tr");
+
+            var td=document.createElement("td");
+            td.innerHTML=bid;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=bname;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=aut;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=cat;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=chk;
+            tr.appendChild(td);
+
+            td=document.createElement("td");
+            td.innerHTML=st;
+            tr.appendChild(td);
+
+            tab.appendChild(tr);
+        }
+
+        function Myfunction()
+        {
+            totalData=String(localStorage.getItem("data")).split("`");
+            
+            tab=document.getElementById("table");
+            var count=0;
+            for(var i=0;i<parseInt(totalData.length/6);i++)
+            {
+                addTable(totalData[count],totalData[count+1],totalData[count+2],totalData[count+3],totalData[count+4],totalData[count+5]);
+                count+=6;
+            }
+            var entry = document.getElementById('entry');
+        //entry.addEventListener("click",displayDetails); 
+        
+        }
+        function displayDetails(){
+            var BookId = document.getElementById('BookId').value;
+            var BookName = document.getElementById('BookName').value;
+            var Author = document.getElementById('Author').value;
+            var cat = document.forms["alldetails"]["selection"].value;
+
+            
+
+            // var SubCatagory1 = document.getElementById('catagary1').value;
+            // var SubCatagory2 = document.getElementById('catagary2').value;
+            // var SubCatagory3 = document.getElementById('catagary3').value;
+
+
+            
+          var checkboxes = document.getElementsByName('Catagory');
+          var chk = "";
+
+         for (var checkbox of checkboxes)
+         {
+         if (checkbox.checked) {
+            chk=chk+" "+checkbox.value;
+        }
+        }
+
+       
+
+       var Status = document.forms["alldetails"]["status"].value;
+
+            // var Barrow = document.getElementById('Barrow').value;
+            // var Return = document.getElementById('Return').value;
+
+            
+            if(BookId.length==0 || BookName.length==0 || Author.length==0 || cat.length==0 || chk.length==0|| Status.length==0){
+                alert("Please fill all the boxes");
+                return false;
+            }
+           else{
+            var count=0;
+            var isfound=false;
+            for(var i=0;i<parseInt(totalData.length/6);i++)
+            {
+                if(totalData[count]==BookId)
+                {
+                    isfound=true;
+                    break;
+                }
+                count+=6;
+            }
+            if(!isfound)
+            {
+                var d = String(localStorage.getItem("data"));
+            if(d!="null")
+            {
+                d=d+BookId+"`"+BookName+"`"+Author+"`"+cat+"`"+chk+"`"+Status+"`";
+                localStorage.setItem("data",d);
+            }
+            else{
+                
+                d=BookId+"`"+BookName+"`"+Author+"`"+cat+"`"+chk+"`"+Status+"`";
+                localStorage.setItem("data",d);
+            }
+            return true;
+            }
+            else{
+                alert("already exit");
+                return false;
+            }
+        }
+        }
+
+        //Reset the table
+        function ReSet(){
+            resetTable();
+            var count=0;
+            for(var i=0;i<parseInt(totalData.length/6);i++)
+            {
+                addTable(totalData[count],totalData[count+1],totalData[count+2],totalData[count+3],totalData[count+4],totalData[count+5]);
+                count+=6;
+            }
+        }
+
+        //Search button
+        function resetTable(){
+            tab.innerHTML="";
+            var tr=document.createElement("tr");
+            var th = document.createElement("th");
+            th.innerHTML="Book Id";
+            tr.appendChild(th);
+
+            th = document.createElement("th");
+            th.innerHTML="Book Name";
+            tr.appendChild(th);
+
+            th = document.createElement("th");
+            th.innerHTML="Author";
+            tr.appendChild(th);
+
+
+            th = document.createElement("th");
+            th.innerHTML="Category";
+            tr.appendChild(th);
+
+            th = document.createElement("th");
+            th.innerHTML="SubCategory";
+            tr.appendChild(th);
+
+            th = document.createElement("th");
+            th.innerHTML="Status";
+            tr.appendChild(th);
+
+            tab.appendChild(tr);
+        }
+        function searchData(){
+            resetTable();
+
+
+            var s=String(document.getElementById("searchEle").value);
+
+            var count=0;
+
+            for(var i=0;i<parseInt(totalData.length/6);i++){
+                if(String(totalData[count])==s){
+                    addTable(totalData[count],totalData[count+1],totalData[count+2],totalData[count+3],totalData[count+4],totalData[count+5]);   
+                }
+                count+=6;
+            }
+        }
+    </script>
+    <!---book add-->
+    <div class="popup">
+        <div class="popup-content">
+            <form action="./addBook.html" name="alldetails" onsubmit="return displayDetails()" id="alldetails" >
+                <table border="5">
+                    <tr>
+                        <td style="text-align:right">Book Id:</td>
+                        <td><input type="text" placeholder="Book Id" name="BookId" id="BookId" required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Book Name:</td>
+                        <td>
+                            <input type="text" placeholder="Book Name" name="BookName" id="BookName" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Author:</td>
+                        <td>
+                            <input type="text" placeholder="Author" name="Author" id="Author" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Catagory:</td>
+                        <td>
+                            <select  name="selection"  id="catagory">
+                                <option value="">-select-</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Mecanical">Mecanical</option>
+                                <option value="Cumputer">Cumputer</option>
+                                <option value="Civil">Civil</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">SubCatagory:</td>
+                        <td >
+                            <input name="Catagory" type="checkbox" value="Catagory1" id="catagary1"><span >Catagory1</span>
+                            <input name="Catagory" type="checkbox" value="Catagory2" id="catagory2">Catagory2
+                            <input name="Catagory" type="checkbox" value="Catagory3" id="catagory3">Catagory3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Status:</td>
+                        <td>
+                           <div id="rates" >
+                            <input name="status" type="radio" id="r1" name="rate" value="Barrow"><span>Barrow</span><br><br>
+                            <input name="status" type="radio" id="r2" name="rate" value="Return"><span >Return</span><br>
+                           </div>
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:30px;">
+                    <!--button  id="entry" type="submit" style="padding-left:29px;padding-right:29px;">Save</button-->
+                    <input id="entry" type="submit" value="Save" style="background-color: aliceblue;border:1px solid black; border-radius: 2px;padding:9px">
+                    
+                    <a href="#" id="button1" style="text-decoration:none; border:1px solid black; border-radius: 2px; background-color: aliceblue;padding:7px">Cancel</a>
+                    
+                </div>
+            </form>  
+            
+        </div>
+
+    </div>
+
+   
+    <!--book add end-->
+
+    <script>
+        document.getElementById('button').addEventListener('click',function(){
+            document.querySelector(".popup").style.display = "flex";
+        })
+        document.getElementById('button1').addEventListener('click',function(){
+            document.querySelector(".popup").style.display = "none";
+        })
+
+    </script>
+</body>
+</html>

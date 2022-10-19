@@ -1,0 +1,50 @@
+
+.nav a{
+    float:right;
+    padding:7px;
+    text-decoration: none;
+    color:#F4F4EC;
+}
+.logo{
+ width:33px;
+ height:33px;
+}
+.img{
+    background-image: url(1.jpg);
+    width:825px;
+    height:250px;
+    
+    background-size: 825px 250px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+p{
+    font-size: 10px;
+    color:#F4F4EC;
+}
+table tr td{
+    border:1px solid ;
+    width:500px;
+    height:100px;
+    text-align: center;  
+    color:#F4F4EC;
+    border-radius: 10px;;
+}
+
+.MB{
+    font-size:15px;
+    padding-left:50px;
+    text-decoration: none;
+    text-align:center;
+    color:#F4F4EC;
+}
+.footer{
+    background-color: #112240;
+    color:#F4F4EC;
+    padding:20px;
+}
+body{
+    background-color: #112240;
+}
+
+
