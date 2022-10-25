@@ -1,0 +1,136 @@
+
+*{
+    margin:0px;
+    padding: 1px;
+}
+.nav a{
+    position: relative;
+    bottom:15px;
+    padding:7px;
+    text-decoration: none;
+    color:#F4F4EC;
+    border-radius: 2px;
+    font-family: Garamond, serif;
+}
+.logo{
+ width:33px;
+ height:33px;
+ animation: rotation 8s infinite linear;
+}
+.img{
+    background-image: url(1.jpg);
+    width:714px;
+    height:250px;
+    background-size: 825px 250px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+   
+    
+}
+/* @keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(359deg);
+    }
+    
+} */
+p{
+    font-size: 13px;
+    
+    text-align: center;
+    padding:15px;
+    
+}
+#links{
+    position: absolute;
+    left:250px;
+    
+}
+table tr td{
+    border:1px solid ;
+    width:100px;
+    height:30px;
+    text-align: center;  
+    color:#F4F4EC;
+    border-radius: 10px;
+    opacity:0.6;
+
+}
+td{
+    text-align: center;
+}
+
+td:hover{
+    opacity: 0.9;
+    color:#64ffda;
+}
+
+.MB{
+    font-size:11px;
+    padding-left:10px;
+    text-decoration: none;
+    text-align:center;
+    color:#F4F4EC;
+    
+}
+.footer{
+    background-color:#070017 ;
+    color:#F4F4EC;
+    border-radius: 3px;
+    font-size: 10px;
+    text-align:center;
+    padding-top:10px;
+    
+}
+.nav a:hover {
+    background-color: rgb(67, 20, 2);
+    border-radius: 5px;
+    color: gold;
+    opacity: 0.4;
+  }
+.nav1{
+    position: fixed;
+    width:100%;
+    background-color: #070017;
+    top:0px;
+    height:35px;
+}
+h1{
+    text-align:center;
+    padding-top:30px;
+}
+
+.td1{
+    background-color: #070017;
+}
+h3{
+    font-size:15px;
+    color:#64ffda;
+    font-family: Garamond, serif;
+}
+.p1{
+    width:400px;
+    font-size: 10px;
+    padding-left:150px;
+    padding-bottom:10px;
+}
+.p2{
+    font-size:7px;
+    font-family: Lucida Console, Courier New, monospace;
+}
+.a2{
+    padding:10px;
+    color:#F4F4EC;
+}
+.table1{
+    position:absolute;
+    /* top:20px; */
+    left:30%;
+    border-spacing: 30px;
+}
+.main
+{
+    padding-bottom: 80px;
+}

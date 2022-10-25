@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="addbook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body onload="Myfunction()">
+    <!-- Header -->
+    <div class="nav1">
+        <div class="nav">
+            <a href="home1.html" id="img"><img src="logo.webp" class="logo"></a>
+            <font>Book Management</font>
+        </div>    
+    </div><br>
+    <!-- Header -->
+    <!-- function button -->
+    <div class="functions">
+        <button class="button" id="button">Add Book</button>
+        <input id="searchEle"  type="text" placeholder="SeachBook">
+        <button class="button" onclick="searchData()" id="button">Search Book</button>
+        <button class="button" onclick="ReSet()" id="button">Reset</button>
+    </div> 
+    <!-- function button -->
+
+    <div><br>
+       <span id="record"> </span>
+        <table id="table" border="2" class="table">
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- PopUp -->
+    <!-- <button class="button" id="button">Add Book</button> -->
+    <div class="popup">
+        <form action="./addBook.html" name="alldetails" onsubmit="return displayDetails()" id="alldetails">
+             <div class="grid-container">
+                 <div>Book Id:</div>
+                 <div><input type="text" placeholder="Book Id" name="BookId" id="BookId" ></div>
+                 <div>Book Name:</div>
+                 <div><input type="text" placeholder="Book Name" name="BookName" id="BookName" ></div>
+                 <div>Author:</div>
+                 <div><input type="text" placeholder="Author" name="Author" id="Author" ></div>
+                 <div>Catagory:</div>
+                 <div> <select name="selection"  id="catagory">
+                     <option value="">Select</option>
+                     <option value="Electronic">Electronic</option>
+                     <option value="Mecanical">Mecanical</option>
+                     <option value="Cumputer">Cumputer</option>
+                     <option value="Civil">Civil</option>
+                 </select></div>
+                 <div>SubCatagory:</div>
+                 <div><input name="Catagory" type="checkbox" value="Catagory1" id="catagary1"><span >Catagory1</span><br>
+                     <input name="Catagory" type="checkbox" value="Catagory2" id="catagory2">Catagory2<br>
+                     <input name="Catagory" type="checkbox" value="Catagory3" id="catagory3">Catagory3</div>
+                 <div>Status:</div>
+                 <div><input name="status" type="radio" id="r1" name="rate" value="Borrow"><span>Borrow</span>
+                     <input name="status" type="radio" id="r2" name="rate" value="Return"><span >Return</span><br></div>
+             </div> 
+            <div id="buttons1">
+             <input id="entry" type="submit"  value="Save">
+             <input id="button1" value="Cancel">
+             </div>   
+         </form>
+    </div>
+    <!-- PopUp -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <h3>Book Management System</h3>
+            <p>It tracks the records of the number of books in the library, how many books are issued, or how many books have been returned or renewed or late fine charges, etc. </p>
+            <a href="#" class="a2"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="a2"><i class="fa fa-twitter"></i></a> 
+            <a href="#" class="a2"><i class="fa fa-google-plus"></i></a>  
+            <a href="#" class="a2"><i class="fa fa-youtube"></i></a> 
+            <a href="#" class="a2"><i class="fa fa-linkedin-square"></i></a><br><br>
+            <p class="p2">copyright &copy;2020 Book Management System. designed by nethunt </p>
+        </div>     
+</footer>
+<!-- footer -->
+    <script src="addbook.js"></script>
+</body>
+</html>
