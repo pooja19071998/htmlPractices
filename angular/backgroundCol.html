@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+   <div ng-app="" ng-init="myCol='lightblue';firstName='john';lastName='Doe'; person={firstName1:'pooja',lastname:'sg'};points=[1,15,19,2,40]">
+    <input style="background-color:{{myCol}}" ng-model="myCol">
+    <p ng-init="quantity=9;cost=5">{{quantity*cost}}</p>
+    
+    <p>The full name is:{{firstName+ " " +lastName}}</p>
+    <p><span ng-bind="firstName+' '+lastName"></span></p>
+    <p >Person Name is {{person.firstName1+" "+person.lastname}}</p>
+    <p>The third result is{{points[2]}}</p>
+    <p>the fourth result is{{points[4]}}</p>
+    
+
+   </div>
+   
+</body>
+</html>
